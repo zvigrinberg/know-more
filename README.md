@@ -29,7 +29,9 @@ Because all of the above, we need a new application that will tackle all of thes
 
 ```shell
 ## append these two lines to the end of the script ~/.bashrc(per user)
-PROMPT_COMMAND=' RC=$(echo $?) ; echo "$(date +"%Y/%m/%d (%H:%M)") $(history 1 |cut -c 7-) $(pwdx $(echo $$)) ,RC= $RC " >> /tmp/trace'
+## PROMPT_COMMAND=' RC=$(echo $?) ; echo "$(date +"%Y/%m/%d (%H:%M)") $(history 1 |cut -c 7-) $(pwdx $(echo $$)) ,RC= $RC " >> /tmp/trace'
+## In case HISTTIMEFORMAT environment vairable is not set, then you need to add $(date +"%Y/%m/%d (%H:%M)") to the beginning of  string apppended to the file.
+PROMPT_COMMAND='RC=$(echo $?);echo "$(history 1 |cut -c 7-) $(pwdx $(echo $$)) ,RC= $RC " >> /tmp/trace ; (echo "Environment Vars:" ;  env ; echo "End of environment variables")   >> /tmp/trace'
 export PROMPT_COMMAND
 ```
 - The chosen programming language for implementing this application is Golang.
