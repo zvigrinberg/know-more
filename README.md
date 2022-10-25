@@ -3,7 +3,8 @@ Application that stores knowledge from command line, and knows how to track it, 
 
 ## Background
 
-Today, if you want to store technical knowledge you're dependant of, in order to run command lines utilities, the common intuitive way is to write it in notes, but this is very tedious and cumbersome . \ 
+Today, if you want to store technical knowledge you're dependant of, in order to run command lines utilities, the common intuitive way is to write it in notes, but this is very tedious and cumbersome.
+
 Another alternative is to use the linux history feature, which is good, but it has some limitations, for example:
 
 1. The size of the history file is limited(although it can be configured and extended to some limit).
@@ -19,7 +20,7 @@ Because all of the above, we need a new application that will tackle all of thes
 2. It will parse all data and insert it into data structure , including all data from previous section, including whether the command was successfull or not(if not, will keep the return code).
 3. It will give option to list all data , all data according to free search ,all data according to dates , according to tags, and by default will show only successfull invocations.
 4. It will enable tagging intercepted commands with certain labels' keys and values, to enhance their fetching in the future.
-5. It will enable to improve manually selected commands, which intercepted with no syntax error or progremmatic errors(RC=0), but there are semantics failure/error, which means that command executed successfully without returning error, but the result wasn't as expected or didn't do the job it was intended to do(only user can know that, hence it will be a function that will be initiated by the user on a certain command. which the user knows if it worked as expected or not) , hence there will be a field called - "semanticallyValidated" which will indicate if the command returned expected and desired command, by default it will have a true value, and user will be able to flip to to false in case it's not working as expected.
+5. It will enable to improve manually selected commands, which intercepted with no syntax error or progremmatic errors(RC=0), but there are semantics failure/error, which means that command executed successfully without returning error, but the result wasn't as expected or didn't do the job it was intended to do(only user can know that, hence it will be a function that will be initiated by the user on a certain command. which the user knows if it worked as expected or not) , hence there will be a field called - "semanticallyValidated" which will indicate if the command returned expected and desired result, by default it will have a true value if command' rc=0, and user will be able to flip it to false in case it's not working as expected, although command didn't fail.
 
 
 ## Prototype Technical details
