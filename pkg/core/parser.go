@@ -9,10 +9,14 @@ import (
 func parseCommandLine(line string) {
    const delimiter = "%*@&"
 	components:= strings.Split(line,delimiter)
-	date:= components[0]
+
    fmt.Println("fds")
 }
 
+func parseTokens(line string)() {
+
+}
+
 func parseEnvironmentVariables(line string) {
-  )
+
 }
