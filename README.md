@@ -40,3 +40,7 @@ export PROMPT_COMMAND
   1. A linux service background utility.
   2. A command line utility to improve knowledge and to get/fetch knowledge.
   3. A lightweight database(TBD)/files with smart datastructures that will store all knowledge data.
+
+## Future planned Features:
+
+- Make a simple Web GUI that will co-exist with CLI and will provide improved UI/UX support to the end user.
