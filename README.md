@@ -21,6 +21,11 @@ Because all of the above, we need a new application that will tackle all of thes
 3. It will give option to list all data , all data according to free search ,all data according to dates , according to tags, and by default will show only successfull invocations.
 4. It will enable tagging intercepted commands with certain labels' keys and values, to enhance their fetching in the future.
 5. It will enable to improve manually selected commands, which intercepted with no syntax error or progremmatic errors(RC=0), but there are semantics failure/error, which means that command executed successfully without returning error, but the result wasn't as expected or didn't do the job it was intended to do(only user can know that, hence it will be a function that will be initiated by the user on a certain command. which the user knows if it worked as expected or not) , hence there will be a field called - "semanticallyValidated" which will indicate if the command returned expected and desired result, by default it will have a true value if command' rc=0, and user will be able to flip it to false in case it's not working as expected, although command didn't fail.
+6. Make the application extensible and more integrable as needed/possible, by providing in-advance hooks built-in in dedicated points at code.
+   For example:
+    - Provide a way for the user to pass REST API URL , so before the data entry will be persisted to DB/data source ,this URL Will be invoked with some metdata about that entry, that will be sent and will pass this data through the request in some agreed HEADER.    
+    - Provide a way to run a user given script before or after commad is intercepted and persisted.
+    - In case semanticallyValidated=false is configured(default overriden), then provide a way for user through CLI to "acknowledge" the command in case he/she's satisfied with the results(RC=0 is not a gurantee for user to be satisfied, off course).
 
 
 ## Prototype Technical details
