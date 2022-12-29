@@ -10,7 +10,7 @@ Another alternative is to use the linux history feature, which is good, but it h
 1. The size of the history file is limited(although it can be configured and extended to some limit).
 2. Although you have there the whole command, you're missing some context, for example,  in which directory the command was executed.
 3. Another problem is that from history , you can't tell whether the command was success or not(RC is not logged there).
-4. When working from several terminals, the logs are written to history only after you exit the terminal, hence commands are not intercepted into log in real time.
+4. When working from several terminals, the logs are written to history only after you exit the terminal, hence commands are not intercepted into log in real time, There will be a feature of automatic tagging mechanism  based on configuration model that will tag commands just after they're intercepted.
 5. It's not known from which terminal the command was invoked, all commands from all terminals are written together to history, one after another, therefore there is not real linear history in history file, as the order depends on when you're closing each terminal.
 
 Because all of the above, we need a new application that will tackle all of these issues
