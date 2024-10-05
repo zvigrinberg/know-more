@@ -13,6 +13,7 @@ Another alternative is to use the linux history feature, which is good, but it h
 3. Another problem is that from history , you can't tell whether the command was success or not(RC is not logged there).
 4. When working from several terminals, the logs are written to history only after you exit the terminal, hence commands are not intercepted into log in real time, There will be a feature of automatic tagging mechanism  based on configuration model that will tag commands just after they're intercepted.
 5. It's not known from which terminal the command was invoked, all commands from all terminals are written together to history, one after another, therefore there is not real linear history in history file, as the order depends on when you're closing each terminal.
+6. The behavior of a lot of CLI tools dictated a lot of times by the environment variables state at the time of commands' invocation - but the environment variables are not tracked or logged per command in history, and you can only see the values of all of the environment variables at a given time, whereas it's possible that some environment variables were set when an historical command was invoked, and it affected the execution of the command, and if you want to reproduce the same command and the same output , you need also the entire state of the environment variables that were at the time when the commmand was originally invoked.
 
 Because all of the above, we need a new application that will tackle all of these issues
 
