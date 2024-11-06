@@ -52,3 +52,4 @@ export PROMPT_COMMAND
 
 - Make a simple Web GUI that will co-exist with CLI and will provide improved UI/UX support to the end user.
 - Develop a mode in which the daemon part will be deployed on a public server(Bare metal/Cloud/Openshift/k8), that is,  multi Users' commands and data will be managed on the server with a shared database , And there will be an authentication mechanism of users(preferably to be integrated with KeyCloak or any other OAuth/Identity provider) to authenticate in front of the server.
+- associate with command' parameters and flags a meaningfull description from the cli/application tool' help being used - do it in an automated manner as background process.
