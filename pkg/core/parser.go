@@ -1,22 +1,8 @@
 package core
-import (
-	"bufio"
-	"fmt"
-	"log"
-	"os"
-	"strings"
-)
-func parseCommandLine(line string) {
-   const delimiter = "%*@&"
-	components:= strings.Split(line,delimiter)
 
-   fmt.Println("fds")
-}
-
-func parseTokens(line string)() {
-
-}
-
-func parseEnvironmentVariables(line string) {
-
+type EnvironmentParser interface {
+	ParseCommandLIne(block string) string
+	ParseRC(block string) int8
+	ParseEnvironmentVariables(block string) map[string]string
+	ParseWorkingDirectory(block string) string
 }
